@@ -1,0 +1,6220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Track Record | OddsCrew
+</title>
+
+<style>
+
+:root {
+    --bg:#070707;
+    --panel:#111;
+    --border:#252525;
+    --text:#fff;
+    --muted:#929292;
+    --red:#e31b23;
+    --green:#20c76b;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 70% -10%,
+            rgba(227,27,35,.11),
+            transparent 30%
+        ),
+        var(--bg);
+
+    color:var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+.wrap {
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header {
+    position:sticky;
+    top:0;
+    z-index:9;
+
+    background:
+        rgba(7,7,7,.93);
+
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+nav {
+    min-height:74px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:24px;
+}
+
+.logo {
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo span,
+.kicker {
+    color:var(--red);
+}
+
+.links {
+    display:flex;
+    gap:24px;
+
+    color:#aaa;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+.status {
+    font-size:11px;
+    color:#aaa;
+    font-weight:700;
+}
+
+.dot {
+    display:inline-block;
+
+    width:8px;
+    height:8px;
+
+    background:var(--green);
+
+    border-radius:50%;
+
+    margin-right:7px;
+}
+
+.hero {
+    padding:
+        105px 0 70px;
+}
+
+.kicker {
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:16px;
+}
+
+h1 {
+    font-size:
+        clamp(
+            46px,
+            7vw,
+            82px
+        );
+
+    line-height:.98;
+    letter-spacing:-4px;
+
+    max-width:900px;
+}
+
+.hero p,
+.copy {
+    color:var(--muted);
+
+    line-height:1.7;
+
+    max-width:700px;
+}
+
+.hero p {
+    font-size:18px;
+    margin-top:26px;
+}
+
+.actions {
+    display:flex;
+
+    gap:12px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+}
+
+.btn {
+    padding:13px 17px;
+
+    border-radius:7px;
+
+    border:
+        1px solid var(--border);
+
+    font-size:12px;
+    font-weight:900;
+}
+
+.primary {
+    background:var(--red);
+    border-color:var(--red);
+}
+
+.stats {
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:15px;
+
+    margin-bottom:75px;
+}
+
+.stat,
+.card,
+.panel,
+.step,
+.record-stat {
+    background:
+        linear-gradient(
+            145deg,
+            #121212,
+            #0d0d0d
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius:12px;
+}
+
+.stat {
+    padding:22px;
+}
+
+small {
+    display:block;
+
+    color:#686868;
+
+    text-transform:uppercase;
+
+    font-size:10px;
+
+    letter-spacing:.8px;
+}
+
+.stat strong {
+    display:block;
+
+    font-size:26px;
+
+    margin-top:7px;
+}
+
+.section {
+    padding:68px 0;
+
+    border-top:
+        1px solid var(--border);
+}
+
+.head {
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:20px;
+
+    margin-bottom:26px;
+}
+
+h2 {
+    font-size:32px;
+    letter-spacing:-1px;
+}
+
+.week {
+    color:#777;
+    font-size:13px;
+}
+
+.projections {
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.card {
+    padding:23px;
+}
+
+.top {
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+}
+
+.top h3 {
+    font-size:21px;
+}
+
+.top p {
+    color:#888;
+
+    font-size:14px;
+
+    margin-top:5px;
+}
+
+.top b {
+    color:#777;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+}
+
+.nums {
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:10px;
+
+    margin-top:23px;
+}
+
+.nums strong {
+    display:block;
+
+    font-size:19px;
+
+    margin-top:5px;
+}
+
+.positive {
+    color:var(--green);
+}
+
+.negative {
+    color:#ff4b55;
+}
+
+.badge {
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:7px 10px;
+
+    border:
+        1px solid rgba(
+            227,
+            27,
+            35,
+            .35
+        );
+
+    background:
+        rgba(
+            227,
+            27,
+            35,
+            .11
+        );
+
+    color:#ff6269;
+
+    border-radius:6px;
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.7px;
+}
+
+.grid2 {
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+}
+
+.panel {
+    padding:27px;
+}
+
+.panel h3 {
+    margin-bottom:10px;
+
+    font-size:20px;
+}
+
+.panel p {
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.75;
+}
+
+.pill {
+    display:inline-block;
+
+    margin-bottom:17px;
+
+    padding:7px 10px;
+
+    border:
+        1px solid rgba(
+            227,
+            27,
+            35,
+            .35
+        );
+
+    border-radius:999px;
+
+    color:#ff6269;
+
+    font-size:10px;
+    font-weight:900;
+}
+
+.record-grid {
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:12px;
+
+    margin-bottom:15px;
+}
+
+.record-stat {
+    padding:20px;
+}
+
+.record-stat strong {
+    display:block;
+
+    margin-top:8px;
+
+    font-size:24px;
+}
+
+.track-panels {
+    margin-top:15px;
+}
+
+.process {
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:10px;
+
+    margin-top:28px;
+}
+
+.step {
+    padding:20px 16px;
+}
+
+.step b {
+    display:block;
+
+    margin:8px 0;
+}
+
+.step p {
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.55;
+}
+
+footer {
+    border-top:
+        1px solid var(--border);
+
+    padding:
+        34px 0 44px;
+
+    color:#666;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+.empty {
+    grid-column:1/-1;
+
+    padding:35px;
+
+    text-align:center;
+
+    color:#888;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:12px;
+}
+
+
+@media(max-width:1000px) {
+
+    .record-grid {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+}
+
+
+@media(max-width:850px) {
+
+    .links {
+        display:none;
+    }
+
+    .process {
+        grid-template-columns:1fr;
+    }
+
+    .grid2 {
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:700px) {
+
+    .stats,
+    .projections,
+    .record-grid {
+        grid-template-columns:1fr;
+    }
+
+    .nums {
+        grid-template-columns:
+            repeat(2,1fr);
+
+        row-gap:18px;
+    }
+
+    .head,
+    .top {
+        align-items:start;
+        flex-direction:column;
+    }
+
+    h1 {
+        letter-spacing:-2px;
+    }
+
+}
+
+</style>
+
+<style>
+
+.glossary-anchor {
+    scroll-margin-top: 110px;
+}
+
+</style>
+
+
+<style>
+
+/* ==========================================================
+   TRACK RECORD DETAIL SECTIONS
+========================================================== */
+
+.track-detail-section {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 58px 0;
+}
+
+
+.track-detail-section
++ .track-detail-section {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.track-detail-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+
+.track-detail-heading h2 {
+    margin-top: 6px;
+    font-size: 1.75rem;
+}
+
+
+.track-detail-heading p {
+    max-width: 650px;
+    margin-top: 10px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .55
+        );
+
+    line-height: 1.65;
+}
+
+
+.track-kicker {
+    color: #e31b23;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+
+/* ==========================================================
+   WEEKLY PERFORMANCE
+========================================================== */
+
+.weekly-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                320px,
+                1fr
+            )
+        );
+
+    gap: 16px;
+}
+
+
+.weekly-card {
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .12
+        );
+
+    border-radius: 12px;
+    padding: 20px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .025
+        );
+}
+
+
+.weekly-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+
+.weekly-heading h3 {
+    margin-top: 3px;
+    font-size: 1.3rem;
+}
+
+
+.weekly-season {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .42
+        );
+
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+
+.weekly-frozen {
+    border:
+        1px solid
+        rgba(
+            227,
+            27,
+            35,
+            .55
+        );
+
+    border-radius: 999px;
+    padding: 6px 9px;
+
+    color: #ff555b;
+
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+}
+
+
+.weekly-stats,
+.weekly-errors {
+    display: grid;
+    gap: 10px;
+}
+
+
+.weekly-stats {
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    padding-bottom: 16px;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .08
+        );
+}
+
+
+.weekly-errors {
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    padding-top: 16px;
+}
+
+
+.weekly-stats small,
+.weekly-errors small {
+    display: block;
+    margin-bottom: 4px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .42
+        );
+
+    font-size: .66rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+
+.weekly-stats strong,
+.weekly-errors strong {
+    font-size: 1rem;
+}
+
+
+/* ==========================================================
+   RECORD CONTROLS
+========================================================== */
+
+.record-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+
+.record-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.record-filter {
+    appearance: none;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .14
+        );
+
+    border-radius: 7px;
+    padding: 8px 13px;
+
+    background: transparent;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .62
+        );
+
+    font: inherit;
+    font-size: .76rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.record-filter:hover {
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            .3
+        );
+
+    color: #fff;
+}
+
+
+.record-filter.active {
+    border-color: #e31b23;
+
+    background:
+        rgba(
+            227,
+            27,
+            35,
+            .12
+        );
+
+    color: #ff555b;
+}
+
+
+.record-count {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .42
+        );
+
+    font-size: .74rem;
+}
+
+
+/* ==========================================================
+   PERMANENT RECORD TABLE
+========================================================== */
+
+.record-table-wrap {
+    width: 100%;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .1
+        );
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.record-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .018
+        );
+}
+
+
+/* ----------------------------------------------------------
+   COLUMN WIDTHS
+---------------------------------------------------------- */
+
+.record-table th:nth-child(1) {
+    width: 8%;
+}
+
+.record-table th:nth-child(2) {
+    width: 15%;
+}
+
+.record-table th:nth-child(3) {
+    width: 13%;
+}
+
+.record-table th:nth-child(4) {
+    width: 7%;
+}
+
+.record-table th:nth-child(5) {
+    width: 10%;
+}
+
+.record-table th:nth-child(6) {
+    width: 8%;
+}
+
+.record-table th:nth-child(7) {
+    width: 10%;
+}
+
+.record-table th:nth-child(8) {
+    width: 10%;
+}
+
+.record-table th:nth-child(9) {
+    width: 19%;
+}
+
+
+/* ----------------------------------------------------------
+   CELLS
+---------------------------------------------------------- */
+
+.record-table th {
+    padding: 13px 10px;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .12
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .42
+        );
+
+    font-size: .63rem;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+
+/*
+    Separate the Projection and Actual header labels
+    without changing the working column widths.
+*/
+
+.record-table th:nth-child(5) {
+    font-size: .59rem;
+    letter-spacing: .025em;
+    transform: translateX(-8px);
+}
+
+
+.record-table th:nth-child(6) {
+    font-size: .59rem;
+    letter-spacing: .025em;
+    transform: translateX(8px);
+}
+
+
+.record-table td {
+    padding: 13px 10px;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .06
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .72
+        );
+
+    font-size: .76rem;
+    vertical-align: middle;
+}
+
+
+.record-table
+tbody
+tr:last-child
+td {
+
+    border-bottom: 0;
+}
+
+
+.record-table
+tbody
+tr:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .025
+        );
+}
+
+
+/* ----------------------------------------------------------
+   WEEK
+---------------------------------------------------------- */
+
+.week-cell strong {
+    display: block;
+    color: #fff;
+    font-size: .72rem;
+}
+
+
+.week-cell span {
+    display: block;
+    margin-top: 2px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .42
+        );
+
+    font-size: .66rem;
+}
+
+
+/* ----------------------------------------------------------
+   PLAYER
+---------------------------------------------------------- */
+
+.player-cell {
+    color: #fff !important;
+    font-weight: 700;
+    overflow-wrap: break-word;
+}
+
+
+/* ----------------------------------------------------------
+   MARKET
+---------------------------------------------------------- */
+
+.market-cell {
+    line-height: 1.35;
+}
+
+
+/* ----------------------------------------------------------
+   NUMBERS
+---------------------------------------------------------- */
+
+.number-cell {
+    white-space: nowrap;
+}
+
+
+/* ----------------------------------------------------------
+   RECORD STATUS
+---------------------------------------------------------- */
+
+.status-cell {
+    overflow: visible;
+}
+
+
+.status-stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.record-label {
+    display: inline-block;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .12
+        );
+
+    border-radius: 5px;
+
+    padding: 4px 5px;
+
+    font-size: .56rem;
+    font-weight: 800;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.qualified-status {
+    border-color:
+        rgba(
+            227,
+            27,
+            35,
+            .45
+        );
+
+    color: #ff555b;
+}
+
+
+.eligible-status {
+    border-color:
+        rgba(
+            32,
+            199,
+            107,
+            .35
+        );
+
+    color: #20c76b;
+}
+
+
+.excluded-status {
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            .2
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .68
+        );
+}
+
+
+.record-row-hidden {
+    display: none;
+}
+
+
+/* ==========================================================
+   TABLET / MOBILE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .track-detail-section {
+        padding: 42px 0;
+    }
+
+
+    .weekly-stats {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .weekly-errors {
+        grid-template-columns: 1fr;
+    }
+
+
+    .record-controls {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .record-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .record-table {
+        min-width: 900px;
+    }
+
+}
+
+</style>
+
+
+<style>
+
+.learn-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255,255,255,.35);
+    transition: border-color .2s ease, color .2s ease;
+}
+
+.learn-link:hover {
+    color: var(--red);
+    border-bottom-color: var(--red);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav class="wrap">
+
+<a
+    class="logo"
+    href="index.html"
+>
+    ODDS<span>CREW</span>
+</a>
+
+<div class="links">
+
+<a href="index.html">
+    Home
+</a>
+
+<a href="projections.html">
+    Projections
+</a>
+
+<a href="track-record.html">
+    Track Record
+</a>
+
+<a href="methodology.html">
+    Methodology
+</a>
+
+<a href="learn.html">
+    Learn
+</a>
+
+<a href="about.html">
+    About
+</a>
+
+</div>
+
+<div class="status">
+
+<span class="dot"></span>
+
+MODEL ACTIVE
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section
+    id="track"
+    class="section"
+>
+
+<div class="wrap">
+
+<div class="head">
+
+<div>
+
+<div class="kicker">
+    TRANSPARENCY
+</div>
+
+<h2>
+    Track Record
+</h2>
+
+</div>
+
+</div>
+
+
+
+    <div class="record-grid">
+
+        <div class="record-stat">
+            <small>Weeks Tracked</small>
+            <strong>1</strong>
+        </div>
+
+        <div class="record-stat">
+            <small>Frozen Projections</small>
+            <strong>61</strong>
+        </div>
+
+        <div class="record-stat">
+            <small><a class="learn-link" href="learn.html#qualified-projection">Qualified Projections</a></small>
+            <strong>6</strong>
+        </div>
+
+        <div class="record-stat">
+            <small><a class="learn-link" href="learn.html#model-mae">Model MAE</a></small>
+            <strong>39.92</strong>
+        </div>
+
+        <div class="record-stat">
+            <small><a class="learn-link" href="learn.html#market-mae">Market MAE</a></small>
+            <strong>38.31</strong>
+        </div>
+
+        
+        <div class="record-stat">
+            <small>Qualified <a class="learn-link" href="learn.html#model-mae">Model MAE</a></small>
+            <strong>
+                18.47
+            </strong>
+        </div>
+
+        <div class="record-stat">
+            <small>Qualified <a class="learn-link" href="learn.html#market-mae">Market MAE</a></small>
+            <strong>
+                11.70
+            </strong>
+        </div>
+        
+
+    </div>
+
+    <div class="grid2 track-panels">
+
+        <div class="panel">
+
+            <span class="pill">
+                FORWARD RESULTS RECORDED
+            </span>
+
+            <h3>
+                Frozen before outcomes.
+            </h3>
+
+            <p>
+                These statistics come from OddsCrew's
+                permanent forward-testing record.
+                Projections are frozen before results
+                and completed weeks are preserved as
+                historical observations.
+            </p>
+
+        </div>
+
+        <div class="panel">
+
+            <h3>
+                Transparent model evaluation.
+            </h3>
+
+<p>
+    Model error is shown alongside market
+    error so performance can be evaluated
+    against the posted market rather than
+    viewed in isolation. Performance metrics
+    currently include 58
+    of 61 frozen observations.
+    3 documented
+    injury/DNP observations are preserved in
+    the permanent record but excluded from
+    performance calculations. Historical
+    results do not guarantee future performance.
+</p>
+        </div>
+
+    </div>
+    
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<section
+    class="track-detail-section"
+    id="weekly-performance"
+>
+
+    <div class="track-detail-heading">
+
+        <div>
+
+            <div class="track-kicker">
+                FORWARD TESTING
+            </div>
+
+            <h2>
+                Weekly Performance
+            </h2>
+
+            <p>
+                Each completed week remains
+                preserved as part of the
+                permanent forward-testing record.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="weekly-grid">
+        
+        <article class="weekly-card">
+
+            <div class="weekly-heading">
+
+                <div>
+
+                    <span class="weekly-season">
+                        NFL 2026
+                    </span>
+
+                    <h3>
+                        Week 2
+                    </h3>
+
+                </div>
+
+                <span class="weekly-frozen">
+                    FROZEN RECORD
+                </span>
+
+            </div>
+
+
+            <div class="weekly-stats">
+
+                <div>
+                    <small>Frozen</small>
+                    <strong>61</strong>
+                </div>
+
+                <div>
+                    <small>Eligible</small>
+                    <strong>58</strong>
+                </div>
+
+                <div>
+                    <small>Excluded</small>
+                    <strong>3</strong>
+                </div>
+
+                <div>
+                    <small>Qualified</small>
+                    <strong>6</strong>
+                </div>
+
+            </div>
+
+
+            <div class="weekly-errors">
+
+                <div>
+                    <small><a class="learn-link" href="learn.html#model-mae">Model MAE</a></small>
+                    <strong>
+                        39.92
+                    </strong>
+                </div>
+
+                <div>
+                    <small><a class="learn-link" href="learn.html#market-mae">Market MAE</a></small>
+                    <strong>
+                        38.31
+                    </strong>
+                </div>
+
+                <div>
+                    <small>Qualified <a class="learn-link" href="learn.html#model-mae">Model MAE</a></small>
+                    <strong>
+                        18.47
+                    </strong>
+                </div>
+
+                <div>
+                    <small>Qualified <a class="learn-link" href="learn.html#market-mae">Market MAE</a></small>
+                    <strong>
+                        11.70
+                    </strong>
+                </div>
+
+            </div>
+
+        </article>
+        
+    </div>
+
+</section>
+
+
+<section
+    class="track-detail-section"
+    id="permanent-record"
+>
+
+    <div class="track-detail-heading">
+
+        <div>
+
+            <div class="track-kicker">
+                FULL HISTORY
+            </div>
+
+            <h2>
+                Permanent Record
+            </h2>
+
+            <p>
+                Every frozen observation remains
+                visible, including documented
+                performance exclusions.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="record-controls">
+
+        <div class="record-filter-group">
+
+            <button
+                type="button"
+                class="record-filter active"
+                data-record-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                type="button"
+                class="record-filter"
+                data-record-filter="qualified"
+            >
+                Qualified
+            </button>
+
+            <button
+                type="button"
+                class="record-filter"
+                data-record-filter="eligible"
+            >
+                Eligible
+            </button>
+
+            <button
+                type="button"
+                class="record-filter"
+                data-record-filter="excluded"
+            >
+                Excluded
+            </button>
+
+        </div>
+
+
+        <div
+            class="record-count"
+            id="record-count"
+            aria-live="polite"
+        >
+            Showing 61
+            of 61
+            frozen observations
+        </div>
+
+    </div>
+
+
+    <div class="record-table-wrap">
+
+        <table class="record-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Week</th>
+                    <th>Player</th>
+                    <th>Market</th>
+                    <th>Line</th>
+                    <th>Projection</th>
+                    <th>Actual</th>
+                    <th>Model Error</th>
+                    <th>Market Error</th>
+                    <th>Record Status</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+                
+        <tr
+            data-week="2"
+            data-qualified="yes"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Bhayshul Tuten
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                52.5
+            </td>
+
+
+            <td class="number-cell">
+                28.7
+            </td>
+
+
+            <td class="number-cell">
+                65.0
+            </td>
+
+
+            <td class="number-cell">
+                36.3
+            </td>
+
+
+            <td class="number-cell">
+                12.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label qualified-status">
+            QUALIFIED
+        </span>
+        
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="yes"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Dawson Knox
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                12.5
+            </td>
+
+
+            <td class="number-cell">
+                23.7
+            </td>
+
+
+            <td class="number-cell">
+                5.0
+            </td>
+
+
+            <td class="number-cell">
+                18.7
+            </td>
+
+
+            <td class="number-cell">
+                7.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label qualified-status">
+            QUALIFIED
+        </span>
+        
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="yes"
+            data-eligibility="excluded"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jaxson Dart
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                29.5
+            </td>
+
+
+            <td class="number-cell">
+                37.0
+            </td>
+
+
+            <td class="number-cell">
+                0.0
+            </td>
+
+
+            <td class="number-cell">
+                37.0
+            </td>
+
+
+            <td class="number-cell">
+                29.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label qualified-status">
+            QUALIFIED
+        </span>
+        
+        <span class="record-label excluded-status">
+            INJURY_EXIT
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="yes"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Patrick Mahomes
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                15.5
+            </td>
+
+
+            <td class="number-cell">
+                28.9
+            </td>
+
+
+            <td class="number-cell">
+                17.0
+            </td>
+
+
+            <td class="number-cell">
+                11.9
+            </td>
+
+
+            <td class="number-cell">
+                1.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label qualified-status">
+            QUALIFIED
+        </span>
+        
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="yes"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Tyler Warren
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="number-cell">
+                39.9
+            </td>
+
+
+            <td class="number-cell">
+                21.0
+            </td>
+
+
+            <td class="number-cell">
+                18.9
+            </td>
+
+
+            <td class="number-cell">
+                24.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label qualified-status">
+            QUALIFIED
+        </span>
+        
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="yes"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Xavier Worthy
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                37.5
+            </td>
+
+
+            <td class="number-cell">
+                31.6
+            </td>
+
+
+            <td class="number-cell">
+                25.0
+            </td>
+
+
+            <td class="number-cell">
+                6.6
+            </td>
+
+
+            <td class="number-cell">
+                12.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label qualified-status">
+            QUALIFIED
+        </span>
+        
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Alec Pierce
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                43.5
+            </td>
+
+
+            <td class="number-cell">
+                58.5
+            </td>
+
+
+            <td class="number-cell">
+                11.0
+            </td>
+
+
+            <td class="number-cell">
+                47.5
+            </td>
+
+
+            <td class="number-cell">
+                32.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Amon-Ra St. Brown
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                81.5
+            </td>
+
+
+            <td class="number-cell">
+                87.5
+            </td>
+
+
+            <td class="number-cell">
+                142.0
+            </td>
+
+
+            <td class="number-cell">
+                54.5
+            </td>
+
+
+            <td class="number-cell">
+                60.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Blake Corum
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="number-cell">
+                34.7
+            </td>
+
+
+            <td class="number-cell">
+                79.0
+            </td>
+
+
+            <td class="number-cell">
+                44.3
+            </td>
+
+
+            <td class="number-cell">
+                33.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Bo Nix
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                223.5
+            </td>
+
+
+            <td class="number-cell">
+                194.7
+            </td>
+
+
+            <td class="number-cell">
+                288.0
+            </td>
+
+
+            <td class="number-cell">
+                93.3
+            </td>
+
+
+            <td class="number-cell">
+                64.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                C.J. Stroud
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                240.5
+            </td>
+
+
+            <td class="number-cell">
+                234.6
+            </td>
+
+
+            <td class="number-cell">
+                353.0
+            </td>
+
+
+            <td class="number-cell">
+                118.4
+            </td>
+
+
+            <td class="number-cell">
+                112.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Cam Skattebo
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                50.5
+            </td>
+
+
+            <td class="number-cell">
+                49.4
+            </td>
+
+
+            <td class="number-cell">
+                36.0
+            </td>
+
+
+            <td class="number-cell">
+                13.4
+            </td>
+
+
+            <td class="number-cell">
+                14.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                CeeDee Lamb
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                74.5
+            </td>
+
+
+            <td class="number-cell">
+                59.6
+            </td>
+
+
+            <td class="number-cell">
+                153.0
+            </td>
+
+
+            <td class="number-cell">
+                93.4
+            </td>
+
+
+            <td class="number-cell">
+                78.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Courtland Sutton
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                42.5
+            </td>
+
+
+            <td class="number-cell">
+                37.3
+            </td>
+
+
+            <td class="number-cell">
+                25.0
+            </td>
+
+
+            <td class="number-cell">
+                12.3
+            </td>
+
+
+            <td class="number-cell">
+                17.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                DJ Moore
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                58.5
+            </td>
+
+
+            <td class="number-cell">
+                47.4
+            </td>
+
+
+            <td class="number-cell">
+                0.0
+            </td>
+
+
+            <td class="number-cell">
+                47.4
+            </td>
+
+
+            <td class="number-cell">
+                58.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Dak Prescott
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                264.5
+            </td>
+
+
+            <td class="number-cell">
+                226.6
+            </td>
+
+
+            <td class="number-cell">
+                279.0
+            </td>
+
+
+            <td class="number-cell">
+                52.4
+            </td>
+
+
+            <td class="number-cell">
+                14.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Dalton Kincaid
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                49.5
+            </td>
+
+
+            <td class="number-cell">
+                43.1
+            </td>
+
+
+            <td class="number-cell">
+                95.0
+            </td>
+
+
+            <td class="number-cell">
+                51.9
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Daniel Jones
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                8.5
+            </td>
+
+
+            <td class="number-cell">
+                11.7
+            </td>
+
+
+            <td class="number-cell">
+                10.0
+            </td>
+
+
+            <td class="number-cell">
+                1.7
+            </td>
+
+
+            <td class="number-cell">
+                1.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Daniel Jones
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                217.5
+            </td>
+
+
+            <td class="number-cell">
+                187.0
+            </td>
+
+
+            <td class="number-cell">
+                210.0
+            </td>
+
+
+            <td class="number-cell">
+                23.0
+            </td>
+
+
+            <td class="number-cell">
+                7.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Davante Adams
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="number-cell">
+                54.3
+            </td>
+
+
+            <td class="number-cell">
+                195.0
+            </td>
+
+
+            <td class="number-cell">
+                140.7
+            </td>
+
+
+            <td class="number-cell">
+                149.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                George Pickens
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                62.5
+            </td>
+
+
+            <td class="number-cell">
+                56.4
+            </td>
+
+
+            <td class="number-cell">
+                40.0
+            </td>
+
+
+            <td class="number-cell">
+                16.4
+            </td>
+
+
+            <td class="number-cell">
+                22.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Isaac TeSlaa
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                14.5
+            </td>
+
+
+            <td class="number-cell">
+                18.5
+            </td>
+
+
+            <td class="number-cell">
+                26.0
+            </td>
+
+
+            <td class="number-cell">
+                7.5
+            </td>
+
+
+            <td class="number-cell">
+                11.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Isaiah Likely
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="number-cell">
+                36.2
+            </td>
+
+
+            <td class="number-cell">
+                33.0
+            </td>
+
+
+            <td class="number-cell">
+                3.2
+            </td>
+
+
+            <td class="number-cell">
+                12.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                J.K. Dobbins
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                50.5
+            </td>
+
+
+            <td class="number-cell">
+                66.6
+            </td>
+
+
+            <td class="number-cell">
+                36.0
+            </td>
+
+
+            <td class="number-cell">
+                30.6
+            </td>
+
+
+            <td class="number-cell">
+                14.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jacory Croskey-Merritt
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                57.5
+            </td>
+
+
+            <td class="number-cell">
+                56.5
+            </td>
+
+
+            <td class="number-cell">
+                43.0
+            </td>
+
+
+            <td class="number-cell">
+                13.5
+            </td>
+
+
+            <td class="number-cell">
+                14.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jahmyr Gibbs
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                30.5
+            </td>
+
+
+            <td class="number-cell">
+                31.5
+            </td>
+
+
+            <td class="number-cell">
+                61.0
+            </td>
+
+
+            <td class="number-cell">
+                29.5
+            </td>
+
+
+            <td class="number-cell">
+                30.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jahmyr Gibbs
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                90.5
+            </td>
+
+
+            <td class="number-cell">
+                81.8
+            </td>
+
+
+            <td class="number-cell">
+                52.0
+            </td>
+
+
+            <td class="number-cell">
+                29.8
+            </td>
+
+
+            <td class="number-cell">
+                38.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                James Cook
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                78.5
+            </td>
+
+
+            <td class="number-cell">
+                68.2
+            </td>
+
+
+            <td class="number-cell">
+                135.0
+            </td>
+
+
+            <td class="number-cell">
+                66.8
+            </td>
+
+
+            <td class="number-cell">
+                56.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jameson Williams
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                59.5
+            </td>
+
+
+            <td class="number-cell">
+                57.1
+            </td>
+
+
+            <td class="number-cell">
+                33.0
+            </td>
+
+
+            <td class="number-cell">
+                24.1
+            </td>
+
+
+            <td class="number-cell">
+                26.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jared Goff
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                270.5
+            </td>
+
+
+            <td class="number-cell">
+                264.7
+            </td>
+
+
+            <td class="number-cell">
+                327.0
+            </td>
+
+
+            <td class="number-cell">
+                62.3
+            </td>
+
+
+            <td class="number-cell">
+                56.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Javonte Williams
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                11.5
+            </td>
+
+
+            <td class="number-cell">
+                13.1
+            </td>
+
+
+            <td class="number-cell">
+                20.0
+            </td>
+
+
+            <td class="number-cell">
+                6.9
+            </td>
+
+
+            <td class="number-cell">
+                8.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Javonte Williams
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                74.5
+            </td>
+
+
+            <td class="number-cell">
+                46.3
+            </td>
+
+
+            <td class="number-cell">
+                30.0
+            </td>
+
+
+            <td class="number-cell">
+                16.3
+            </td>
+
+
+            <td class="number-cell">
+                44.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="excluded"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jaxson Dart
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                212.5
+            </td>
+
+
+            <td class="number-cell">
+                201.5
+            </td>
+
+
+            <td class="number-cell">
+                20.0
+            </td>
+
+
+            <td class="number-cell">
+                181.5
+            </td>
+
+
+            <td class="number-cell">
+                192.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label excluded-status">
+            INJURY_EXIT
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jayden Daniels
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                37.5
+            </td>
+
+
+            <td class="number-cell">
+                41.8
+            </td>
+
+
+            <td class="number-cell">
+                69.0
+            </td>
+
+
+            <td class="number-cell">
+                27.2
+            </td>
+
+
+            <td class="number-cell">
+                31.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jayden Daniels
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                204.5
+            </td>
+
+
+            <td class="number-cell">
+                169.2
+            </td>
+
+
+            <td class="number-cell">
+                96.0
+            </td>
+
+
+            <td class="number-cell">
+                73.2
+            </td>
+
+
+            <td class="number-cell">
+                108.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jaylen Waddle
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                53.5
+            </td>
+
+
+            <td class="number-cell">
+                34.7
+            </td>
+
+
+            <td class="number-cell">
+                138.0
+            </td>
+
+
+            <td class="number-cell">
+                103.3
+            </td>
+
+
+            <td class="number-cell">
+                84.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Joe Burrow
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                250.5
+            </td>
+
+
+            <td class="number-cell">
+                261.8
+            </td>
+
+
+            <td class="number-cell">
+                207.0
+            </td>
+
+
+            <td class="number-cell">
+                54.8
+            </td>
+
+
+            <td class="number-cell">
+                43.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jonathan Taylor
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                16.5
+            </td>
+
+
+            <td class="number-cell">
+                21.0
+            </td>
+
+
+            <td class="number-cell">
+                40.0
+            </td>
+
+
+            <td class="number-cell">
+                19.0
+            </td>
+
+
+            <td class="number-cell">
+                23.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Jonathan Taylor
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                87.5
+            </td>
+
+
+            <td class="number-cell">
+                78.8
+            </td>
+
+
+            <td class="number-cell">
+                92.0
+            </td>
+
+
+            <td class="number-cell">
+                13.2
+            </td>
+
+
+            <td class="number-cell">
+                4.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Josh Allen
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                250.5
+            </td>
+
+
+            <td class="number-cell">
+                241.8
+            </td>
+
+
+            <td class="number-cell">
+                248.0
+            </td>
+
+
+            <td class="number-cell">
+                6.2
+            </td>
+
+
+            <td class="number-cell">
+                2.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Josh Allen
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                30.5
+            </td>
+
+
+            <td class="number-cell">
+                29.1
+            </td>
+
+
+            <td class="number-cell">
+                69.0
+            </td>
+
+
+            <td class="number-cell">
+                39.9
+            </td>
+
+
+            <td class="number-cell">
+                38.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Josh Downs
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                36.5
+            </td>
+
+
+            <td class="number-cell">
+                49.2
+            </td>
+
+
+            <td class="number-cell">
+                72.0
+            </td>
+
+
+            <td class="number-cell">
+                22.8
+            </td>
+
+
+            <td class="number-cell">
+                35.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Josh Palmer
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                13.5
+            </td>
+
+
+            <td class="number-cell">
+                31.2
+            </td>
+
+
+            <td class="number-cell">
+                43.0
+            </td>
+
+
+            <td class="number-cell">
+                11.8
+            </td>
+
+
+            <td class="number-cell">
+                29.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Keenan Allen
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                30.5
+            </td>
+
+
+            <td class="number-cell">
+                46.7
+            </td>
+
+
+            <td class="number-cell">
+                5.0
+            </td>
+
+
+            <td class="number-cell">
+                41.7
+            </td>
+
+
+            <td class="number-cell">
+                25.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Kenneth Walker III
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                19.5
+            </td>
+
+
+            <td class="number-cell">
+                21.4
+            </td>
+
+
+            <td class="number-cell">
+                61.0
+            </td>
+
+
+            <td class="number-cell">
+                39.6
+            </td>
+
+
+            <td class="number-cell">
+                41.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Kenneth Walker III
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                79.5
+            </td>
+
+
+            <td class="number-cell">
+                76.0
+            </td>
+
+
+            <td class="number-cell">
+                117.0
+            </td>
+
+
+            <td class="number-cell">
+                41.0
+            </td>
+
+
+            <td class="number-cell">
+                37.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Keon Coleman
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                12.5
+            </td>
+
+
+            <td class="number-cell">
+                29.2
+            </td>
+
+
+            <td class="number-cell">
+                63.0
+            </td>
+
+
+            <td class="number-cell">
+                33.8
+            </td>
+
+
+            <td class="number-cell">
+                50.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Khalil Shakir
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="number-cell">
+                46.0
+            </td>
+
+
+            <td class="number-cell">
+                38.0
+            </td>
+
+
+            <td class="number-cell">
+                8.0
+            </td>
+
+
+            <td class="number-cell">
+                7.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Kyren Williams
+            </td>
+
+
+            <td class="market-cell">
+
+                Rushing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                62.5
+            </td>
+
+
+            <td class="number-cell">
+                75.7
+            </td>
+
+
+            <td class="number-cell">
+                85.0
+            </td>
+
+
+            <td class="number-cell">
+                9.3
+            </td>
+
+
+            <td class="number-cell">
+                22.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Malik Nabers
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                63.5
+            </td>
+
+
+            <td class="number-cell">
+                57.8
+            </td>
+
+
+            <td class="number-cell">
+                1.0
+            </td>
+
+
+            <td class="number-cell">
+                56.8
+            </td>
+
+
+            <td class="number-cell">
+                62.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Matthew Stafford
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                247.5
+            </td>
+
+
+            <td class="number-cell">
+                245.3
+            </td>
+
+
+            <td class="number-cell">
+                327.0
+            </td>
+
+
+            <td class="number-cell">
+                81.7
+            </td>
+
+
+            <td class="number-cell">
+                79.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Parker Washington
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                51.5
+            </td>
+
+
+            <td class="number-cell">
+                60.6
+            </td>
+
+
+            <td class="number-cell">
+                98.0
+            </td>
+
+
+            <td class="number-cell">
+                37.4
+            </td>
+
+
+            <td class="number-cell">
+                46.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Patrick Mahomes
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                220.5
+            </td>
+
+
+            <td class="number-cell">
+                223.0
+            </td>
+
+
+            <td class="number-cell">
+                382.0
+            </td>
+
+
+            <td class="number-cell">
+                159.0
+            </td>
+
+
+            <td class="number-cell">
+                161.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="excluded"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Puka Nacua
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                85.5
+            </td>
+
+
+            <td class="number-cell">
+                83.5
+            </td>
+
+
+            <td class="number-cell">
+                —
+            </td>
+
+
+            <td class="number-cell">
+                —
+            </td>
+
+
+            <td class="number-cell">
+                —
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label excluded-status">
+            DID_NOT_PLAY
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Rashee Rice
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                54.5
+            </td>
+
+
+            <td class="number-cell">
+                57.3
+            </td>
+
+
+            <td class="number-cell">
+                83.0
+            </td>
+
+
+            <td class="number-cell">
+                25.7
+            </td>
+
+
+            <td class="number-cell">
+                28.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Sam LaPorta
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                45.5
+            </td>
+
+
+            <td class="number-cell">
+                61.1
+            </td>
+
+
+            <td class="number-cell">
+                52.0
+            </td>
+
+
+            <td class="number-cell">
+                9.1
+            </td>
+
+
+            <td class="number-cell">
+                6.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Stefon Diggs
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                46.5
+            </td>
+
+
+            <td class="number-cell">
+                70.0
+            </td>
+
+
+            <td class="number-cell">
+                47.0
+            </td>
+
+
+            <td class="number-cell">
+                23.0
+            </td>
+
+
+            <td class="number-cell">
+                0.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Terry McLaurin
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                51.5
+            </td>
+
+
+            <td class="number-cell">
+                56.7
+            </td>
+
+
+            <td class="number-cell">
+                50.0
+            </td>
+
+
+            <td class="number-cell">
+                6.7
+            </td>
+
+
+            <td class="number-cell">
+                1.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Travis Kelce
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                42.5
+            </td>
+
+
+            <td class="number-cell">
+                50.3
+            </td>
+
+
+            <td class="number-cell">
+                101.0
+            </td>
+
+
+            <td class="number-cell">
+                50.7
+            </td>
+
+
+            <td class="number-cell">
+                58.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Trevor Lawrence
+            </td>
+
+
+            <td class="market-cell">
+
+                Passing Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                220.5
+            </td>
+
+
+            <td class="number-cell">
+                248.3
+            </td>
+
+
+            <td class="number-cell">
+                189.0
+            </td>
+
+
+            <td class="number-cell">
+                59.3
+            </td>
+
+
+            <td class="number-cell">
+                31.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+
+        <tr
+            data-week="2"
+            data-qualified="no"
+            data-eligibility="eligible"
+        >
+
+            <td class="week-cell">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    W2
+                </span>
+
+            </td>
+
+
+            <td class="player-cell">
+                Tyquan Thornton
+            </td>
+
+
+            <td class="market-cell">
+
+                Receiving Yards
+
+            </td>
+
+
+            <td class="number-cell">
+                14.5
+            </td>
+
+
+            <td class="number-cell">
+                18.6
+            </td>
+
+
+            <td class="number-cell">
+                86.0
+            </td>
+
+
+            <td class="number-cell">
+                67.4
+            </td>
+
+
+            <td class="number-cell">
+                71.5
+            </td>
+
+
+            <td class="status-cell">
+
+                <div class="status-stack">
+                    
+        <span class="record-label eligible-status">
+            ELIGIBLE
+        </span>
+        
+                </div>
+
+            </td>
+
+        </tr>
+        
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+<div class="wrap">
+
+<b>
+    ODDSCREW
+</b>
+
+<br>
+
+Data. Research. Edges.
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const rows =
+            Array.from(
+                document.querySelectorAll(
+                    ".record-table tbody tr"
+                )
+            );
+
+
+        const buttons =
+            Array.from(
+                document.querySelectorAll(
+                    ".record-filter"
+                )
+            );
+
+
+        const count =
+            document.getElementById(
+                "record-count"
+            );
+
+
+        let activeFilter =
+            "all";
+
+
+        function applyRecordFilter() {
+
+            let visible = 0;
+
+
+            rows.forEach(
+                row => {
+
+                    let show = true;
+
+
+                    if (
+                        activeFilter
+                        === "qualified"
+                    ) {
+
+                        show =
+                            row.dataset
+                                .qualified
+                            === "yes";
+
+                    }
+
+
+                    else if (
+                        activeFilter
+                        === "eligible"
+                    ) {
+
+                        show =
+                            row.dataset
+                                .eligibility
+                            === "eligible";
+
+                    }
+
+
+                    else if (
+                        activeFilter
+                        === "excluded"
+                    ) {
+
+                        show =
+                            row.dataset
+                                .eligibility
+                            === "excluded";
+
+                    }
+
+
+                    row.classList.toggle(
+                        "record-row-hidden",
+                        !show
+                    );
+
+
+                    if (show) {
+                        visible += 1;
+                    }
+
+                }
+            );
+
+
+            count.textContent =
+                `Showing ${visible} of `
+                + `${rows.length} `
+                + `frozen observations`;
+
+        }
+
+
+        buttons.forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        activeFilter =
+                            button.dataset
+                                .recordFilter;
+
+
+                        buttons.forEach(
+                            item =>
+                                item.classList
+                                    .remove(
+                                        "active"
+                                    )
+                        );
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        applyRecordFilter();
+
+                    }
+                );
+
+            }
+        );
+
+
+        applyRecordFilter();
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

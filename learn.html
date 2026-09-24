@@ -12,7 +12,7 @@
 >
 
 <title>
-    OddsCrew | Sports Analytics
+    Learn | OddsCrew
 </title>
 
 <style>
@@ -576,93 +576,13 @@ footer {
 
 </style>
 
-
 <style>
 
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.home-panel {
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 28px;
-    background: var(--panel);
-}
-
-.home-panel h3 {
-    font-size: 24px;
-    margin: 8px 0 12px;
-}
-
-.home-panel p {
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 22px;
-}
-
-.home-number {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.home-label {
-    color: var(--muted);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-
-.home-metrics {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 22px;
-}
-
-.home-metric {
-    border-top: 1px solid var(--line);
-    padding-top: 14px;
-}
-
-.home-metric strong {
-    display: block;
-    font-size: 25px;
-    margin-top: 4px;
-}
-
-.home-link {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-weight: 700;
-    font-size: 13px;
-}
-
-.home-link:hover {
-    border-color: var(--red);
-}
-
-@media (max-width: 760px) {
-
-    .home-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .home-metrics {
-        grid-template-columns: 1fr 1fr;
-    }
-
+.glossary-anchor {
+    scroll-margin-top: 110px;
 }
 
 </style>
-
 
 </head>
 
@@ -673,7 +593,10 @@ footer {
 
 <nav class="wrap">
 
-<a class="logo" href="index.html">
+<a
+    class="logo"
+    href="index.html"
+>
     ODDS<span>CREW</span>
 </a>
 
@@ -706,8 +629,11 @@ footer {
 </div>
 
 <div class="status">
-    <span class="dot"></span>
-    MODEL ACTIVE
+
+<span class="dot"></span>
+
+MODEL ACTIVE
+
 </div>
 
 </nav>
@@ -717,127 +643,35 @@ footer {
 
 <main>
 
-<section
-    id="home"
-    class="wrap hero"
->
+
+
+<section class="wrap hero">
+
+<div>
 
 <div class="kicker">
-    ODDSCREW SPORTS ANALYTICS
+
+ODDSCREW LEARN
+
 </div>
 
 <h1>
-    Sports analytics.
-    <br>
-    Built in public.
+
+Understand the numbers.
+
 </h1>
 
 <p>
-    Data-driven NFL projections,
-    market analysis, and transparent
-    forward testing. OddsCrew freezes
-    qualifying model projections before
-    results and tracks what happens next.
+
+A plain-English guide to the terminology used
+throughout OddsCrew.
+
 </p>
-
-<div class="actions">
-
-<a
-    class="btn primary"
-    href="projections.html"
->
-    VIEW PROJECTIONS
-</a>
-
-<a
-    class="btn"
-    href="methodology.html"
->
-    HOW IT WORKS
-</a>
 
 </div>
 
 </section>
-<section class="section">
 
-<div class="wrap">
-
-<div class="head">
-
-<div>
-
-<div class="kicker">
-    CURRENT WEEK
-</div>
-
-<h2>
-    NFL 2026 · Week 3
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="home-grid">
-
-
-<div class="home-panel">
-
-<div class="home-label">
-    Frozen model board
-</div>
-
-<div class="home-number">
-    120
-</div>
-
-<p>
-    Player-market projections were frozen before
-    results for the current forward-testing week.
-</p>
-
-<a
-    class="home-link"
-    href="projections.html"
->
-    View projections →
-</a>
-
-</div>
-
-
-<div class="home-panel">
-
-<div class="home-label">
-    Qualified projections
-</div>
-
-<div class="home-number">
-    21
-</div>
-
-<p>
-    Projections that passed the predefined V12
-    volatility and model-gap qualification criteria.
-</p>
-
-<a
-    class="home-link"
-    href="methodology.html"
->
-    See qualification process →
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
 
 <section class="section">
 
@@ -848,11 +682,15 @@ footer {
 <div>
 
 <div class="kicker">
-    TRANSPARENCY
+
+GLOSSARY
+
 </div>
 
 <h2>
-    Forward track record
+
+OddsCrew terminology
+
 </h2>
 
 </div>
@@ -860,217 +698,289 @@ footer {
 </div>
 
 
-<div class="home-panel">
+<div class="steps">
 
-<div class="home-label">
-    Permanent record
-</div>
 
-<div class="home-number">
-    61
-</div>
+<div
+    class="step glossary-anchor"
+    id="model-projection"
+>
+
+<small>
+01
+</small>
+
+<b>
+MODEL PROJECTION
+</b>
 
 <p>
-    Frozen observations currently preserved in the
-    permanent OddsCrew forward-testing record.
+
+The statistical estimate produced by the OddsCrew
+model for a player's performance in a specific market.
+
 </p>
 
-
-<div class="home-metrics">
-
-
-<div class="home-metric">
-
-<span class="home-label">
-    Performance eligible
-</span>
-
-<strong>
-    58
-</strong>
-
 </div>
 
 
-<div class="home-metric">
-
-<span class="home-label">
-    Documented exclusions
-</span>
-
-<strong>
-    3
-</strong>
-
-</div>
-
-
-<div class="home-metric">
-
-<span class="home-label">
-    Model MAE
-</span>
-
-<strong>
-    39.92
-</strong>
-
-</div>
-
-
-<div class="home-metric">
-
-<span class="home-label">
-    Market MAE
-</span>
-
-<strong>
-    38.31
-</strong>
-
-</div>
-
-
-</div>
-
-<br>
-
-<a
-    class="home-link"
-    href="track-record.html"
+<div
+    class="step glossary-anchor"
+    id="market-line"
 >
-    View full track record →
-</a>
 
-</div>
+<small>
+02
+</small>
 
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="wrap">
-
-<div class="head">
-
-<div>
-
-<div class="kicker">
-    EXPLORE ODDSCREW
-</div>
-
-<h2>
-    Data with context.
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="home-grid">
-
-
-<div class="home-panel">
-
-<div class="kicker">
-    RESEARCH
-</div>
-
-<h3>
-    How the model works
-</h3>
+<b>
+MARKET LINE
+</b>
 
 <p>
-    See how OddsCrew generates projections,
-    compares them with market numbers, applies
-    frozen criteria, and grades results.
+
+The reference number available in the market when
+the projection is collected and frozen.
+
 </p>
 
-<a
-    class="home-link"
-    href="methodology.html"
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="gap"
 >
-    Explore methodology →
-</a>
 
-</div>
+<small>
+03
+</small>
 
-
-<div class="home-panel">
-
-<div class="kicker">
-    LEARN
-</div>
-
-<h3>
-    Understand the numbers
-</h3>
+<b>
+GAP
+</b>
 
 <p>
-    MAE, volatility, model gap, forward testing,
-    V12 and other OddsCrew terminology explained
-    in plain English.
+
+Projection minus market line. A positive gap means
+the model projects above the market number. A negative
+gap means it projects below it.
+
 </p>
 
-<a
-    class="home-link"
-    href="learn.html"
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="volatility"
 >
-    Open glossary →
-</a>
 
-</div>
+<small>
+04
+</small>
 
-
-<div class="home-panel">
-
-<div class="kicker">
-    CURRENT BOARD
-</div>
-
-<h3>
-    Qualified projections
-</h3>
+<b>
+VOLATILITY
+</b>
 
 <p>
-    View the current frozen projections that passed
-    the predefined V12 qualification criteria.
+
+A measure of how much a player's historical results
+vary. Lower volatility generally means the player's
+past outcomes have been more consistent.
+
 </p>
 
-<a
-    class="home-link"
-    href="projections.html"
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="mae"
 >
-    View current board →
-</a>
 
-</div>
+<small>
+05
+</small>
 
-
-<div class="home-panel">
-
-<div class="kicker">
-    ABOUT
-</div>
-
-<h3>
-    Building in public
-</h3>
+<b>
+MAE
+</b>
 
 <p>
-    Learn why OddsCrew preserves projections,
-    publishes results, and develops its analytics
-    process through forward testing.
+
+Mean Absolute Error. It measures the average distance
+between a projection and the actual result. Lower MAE
+means smaller average prediction errors.
+
 </p>
 
-<a
-    class="home-link"
-    href="about.html"
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="model-mae"
 >
-    About OddsCrew →
-</a>
+
+<small>
+06
+</small>
+
+<b>
+MODEL MAE
+</b>
+
+<p>
+
+The average absolute error of OddsCrew projections
+compared with the actual results.
+
+</p>
+
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="market-mae"
+>
+
+<small>
+07
+</small>
+
+<b>
+MARKET MAE
+</b>
+
+<p>
+
+The average absolute error of the frozen market lines
+compared with the same actual results.
+
+</p>
+
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="qualified-projection"
+>
+
+<small>
+08
+</small>
+
+<b>
+QUALIFIED PROJECTION
+</b>
+
+<p>
+
+A frozen projection that passes the predefined V12
+selection criteria. Qualification does not by itself
+establish a validated directional edge.
+
+</p>
+
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="forward-testing"
+>
+
+<small>
+09
+</small>
+
+<b>
+FORWARD TESTING
+</b>
+
+<p>
+
+Evaluating projections that were frozen before the
+outcomes were known instead of adjusting the model
+after seeing the results.
+
+</p>
+
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="v12"
+>
+
+<small>
+10
+</small>
+
+<b>
+V12
+</b>
+
+<p>
+
+The current OddsCrew research model. V12 evaluates
+model-to-market discrepancies alongside historical
+uncertainty and applies frozen qualification criteria
+before results occur.
+
+</p>
+
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="performance-eligible"
+>
+
+<small>
+11
+</small>
+
+<b>
+PERFORMANCE ELIGIBLE
+</b>
+
+<p>
+
+A frozen observation that remains included in normal
+model-performance calculations.
+
+</p>
+
+</div>
+
+
+<div
+    class="step glossary-anchor"
+    id="excluded-observation"
+>
+
+<small>
+12
+</small>
+
+<b>
+EXCLUDED OBSERVATION
+</b>
+
+<p>
+
+A frozen observation preserved in the permanent
+record but excluded from performance calculations
+under the documented exclusion policy.
+
+</p>
 
 </div>
 
